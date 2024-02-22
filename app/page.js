@@ -1,94 +1,56 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import imgPost from "@/article-preview-component-master/images/drawers.jpg"
+import avatarImg from "@/article-preview-component-master/images/avatar-michelle.jpg"
+
+import shareIcon from "@/article-preview-component-master/images/icon-share.svg"
+import facebookIcon from "@/article-preview-component-master/images/icon-facebook.svg"
+import twitterIcon from "@/article-preview-component-master/images/icon-twitter.svg"
+import pinterestIcon from "@/article-preview-component-master/images/icon-pinterest.svg"
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <div className={styles.component}>
+        <div className={styles.imgcontainer}>
+          <Image
+            src={imgPost}
+          />
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className={styles.content}>
           <h2>
-            Docs <span>-&gt;</span>
+            Shift the overall look and feel by adding these wonderful touches to furniture in your home
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting.I've got some simple tips to help you make any room feel complete</p>
+          <div className={styles.avatarcontainer}>
+            <div className={styles.avatarbox}>
+              <Image src={avatarImg} />
+              <div className={styles.avatarname}>
+                <p className={styles.name}>Michelle Appleton</p>
+                <p className={styles.date}>28 Jun 2020</p>
+              </div>
+            </div>
+            <div className={styles.sharecontainer}>
+              <Image
+                src={shareIcon}
+              />
+              <div className={styles.sharemenu}>
+                <div className={styles.menuitem}>
+                  <p>Share</p>
+                  <a href="#">
+                    <Image src={facebookIcon} />
+                  </a>
+                  <a href="#">
+                    <Image src={twitterIcon} />
+                  </a>
+                  <a href="#">
+                    <Image src={pinterestIcon} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
